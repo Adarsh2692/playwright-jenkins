@@ -27,7 +27,7 @@ jobs:
           local-testing: start
           local-logging-level: all-logs
           local-args: --force-local
-      - run: npm run test
+      - run: BROWSERSTACK_LOCAL=true npm run test
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
         with:
