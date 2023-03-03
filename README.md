@@ -1,35 +1,27 @@
-# Testing with playwright-browserstack in Test Runner
+# Team 1 - Hackathon
 
-[Playwright](https://playwright.dev/) Integration with BrowserStack.
+BrowserStack Automate and Test Observability setup with Percy
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
 ## Setup
 
-* Clone the repo and run `cd playwright-test`
+* Clone the repo and run `cd Team1-hackathon`
 * Run `npm install`
 
 ## Running your tests
 
-- To run a single test, run `npm test`
+- Provide your BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY as follows
 
-  ### Run sample test on privately hosted websites
+For Mac
+export BROWSERSTACK_USERNAME=adarshsingh_GkJR3E && export BROWSERSTACK_ACCESS_KEY=1vCozpaWJZyz2wY7t2Xx
 
-    **Using Command-line Interface**
-    1. You have to download the BrowserStack Local binary from the links below (depending on your environment):
-        * [OS X (10.7 and above)](https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip)
-        * [Linux 32-bit](https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-ia32.zip)
-        * [Linux 64-bit](https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip)
-        * [Windows (XP and above)](https://www.browserstack.com/browserstack-local/BrowserStackLocal-win32.zip)
-    2. Once you have downloaded and unzipped the file, you can initiate the binary by running the command: `./BrowserStackLocal --key YOUR_ACCESS_KEY`
-    3. Once you see the terminal say "[SUCCESS]" You can now access your local server(s) in our remote browser”, your local testing connection is considered established.
-    4. You can then run the sample Local test using `npm run test:local`
+For Windows
+set BROWSERSTACK_USERNAME=adarshsingh_GkJR3E
+set BROWSERSTACK_ACCESS_KEY=1vCozpaWJZyz2wY7t2Xx
 
-Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+Also, to be able to execute the percy tests, you will need to add your Percy project token
 
 
-## Notes
-* You can view your test results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
-
-## Additional Resources
-* [Documentation for writing Automate test scripts with BrowserStack](https://www.browserstack.com/docs/automate/playwright)
+To run the test, execute:
+npm test
